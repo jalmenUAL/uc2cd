@@ -111,7 +111,7 @@ public class Uc2iActions implements VPActionController {
 				association.setFrom(act_from);
 				association.setTo(Class);
 				IAssociationEnd associationFromEnd = (IAssociationEnd) association.getFromEnd();
-				associationFromEnd.setMultiplicity("1");
+				//2025associationFromEnd.setMultiplicity("1");
 				associationFromEnd.setName("_" + clean(act_from.getName()));
 				IAssociationEnd associationToEnd = (IAssociationEnd) association.getToEnd();
 				associationToEnd.setMultiplicity("1");
@@ -202,6 +202,8 @@ public class Uc2iActions implements VPActionController {
 					viewManager.showMessage("Warning: Duplicate use case names");
 				}
 				usecase_id.put(clean(useCase.getName()), Class.getId());
+				
+				
 				if (useCase.hasStereotype("list")) {
 					
 					
@@ -314,7 +316,7 @@ public class Uc2iActions implements VPActionController {
 				IModelElement tousecase = relationshipEnd.getEndRelationship().getTo();
 
 				String list = "";
-				if (fromactor.hasStereotype("list")) {
+				 if (fromactor.hasStereotype("list")) {
 					if (tousecase.hasStereotype("option")) {
 						list = "";
 					} else {
@@ -398,7 +400,7 @@ public class Uc2iActions implements VPActionController {
 
 					if (fromactor.hasStereotype("external")) {
 						IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
-						associationFromEnd.setMultiplicity("1");
+						//2025associationFromEnd.setMultiplicity("1");
 						associationFromEnd.setName("_" + clean(actor_from.getName()));
 						IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 						associationToEnd.setMultiplicity("1");
@@ -524,7 +526,7 @@ public class Uc2iActions implements VPActionController {
 
 					if (fromactor.hasStereotype("external")) {
 						IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
-						associationFromEnd.setMultiplicity("1");
+						//2025associationFromEnd.setMultiplicity("1");
 						associationFromEnd.setName("_" + clean(actor_from.getName()));
 						IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 						associationToEnd.setMultiplicity("1");
@@ -592,8 +594,8 @@ public class Uc2iActions implements VPActionController {
 					nassociation.setFrom(usecase_from);
 					nassociation.setTo(usecase_to);
 					IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
-					associationFromEnd.setMultiplicity("1");
-					associationFromEnd.setName("_" + clean(usecase_from.getName()));
+					//2025associationFromEnd.setMultiplicity("1");
+					associationFromEnd.setName("_" + clean(usecase_from.getName())+"cojones"); //2025
 					IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 					associationToEnd.setMultiplicity("1");
 					associationToEnd.setName("_" + clean(usecase_to.getName()));
@@ -631,7 +633,7 @@ public class Uc2iActions implements VPActionController {
 					nassociation.setFrom(usecase_from);
 					nassociation.setTo(usecase_to);
 					IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
-					associationFromEnd.setMultiplicity("1");
+					//2025associationFromEnd.setMultiplicity("1");
 					associationFromEnd.setName("_" + clean(usecase_from.getName()));
 					IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 					associationToEnd.setMultiplicity("1");
@@ -667,7 +669,7 @@ public class Uc2iActions implements VPActionController {
 					nassociation.setFrom(usecase_from);
 					nassociation.setTo(usecase_to);
 					IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
-					associationFromEnd.setMultiplicity("1");
+					//2025associationFromEnd.setMultiplicity("1");
 					associationFromEnd.setName("_" + clean(usecase_from.getName()));
 					IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 					associationToEnd.setMultiplicity("1");
