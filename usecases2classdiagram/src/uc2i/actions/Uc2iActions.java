@@ -21,6 +21,7 @@ import com.vp.plugin.model.IModel;
 import com.vp.plugin.model.IModelElement;
 import com.vp.plugin.model.IOperation;
 import com.vp.plugin.model.IPackage;
+import com.vp.plugin.model.IParameter;
 import com.vp.plugin.model.IRealization;
 import com.vp.plugin.model.IRelationship;
 import com.vp.plugin.model.IRelationshipEnd;
@@ -214,6 +215,9 @@ public class Uc2iActions implements VPActionController {
 					usecase_id.put(clean(useCase.getName()) + "_item", ClassItem.getId());
 					
 					Class.addStereotype("list");
+					
+					 
+					
 					ITransitProperty transitProp1 = (ITransitProperty) useCase
 							.getModelPropertyByName(IModel.PROP_TRANSIT_TO);
 					transitProp1.addValue(ClassItem);
@@ -316,13 +320,13 @@ public class Uc2iActions implements VPActionController {
 				IModelElement tousecase = relationshipEnd.getEndRelationship().getTo();
 
 				String list = "";
-				 if (fromactor.hasStereotype("list")) {
+				/* if (fromactor.hasStereotype("list")) {
 					if (tousecase.hasStereotype("option")) {
 						list = "";
 					} else {
 						list = "_item";
 					}
-				}
+				} 2025 */
 
 				if (tousecase.hasStereotype("event")) {
 
@@ -442,13 +446,13 @@ public class Uc2iActions implements VPActionController {
 				IModelElement tousecase = relationshipEnd.getEndRelationship().getFrom();
 
 				String list = "";
-				if (fromactor.hasStereotype("list")) {
+				/*if (fromactor.hasStereotype("list")) {
 					if (tousecase.hasStereotype("option")) {
 						list = "";
 					} else {
 						list = "_item";
 					}
-				}
+				}2025 */
 
 				if (tousecase.hasStereotype("event")) {
 
@@ -570,6 +574,8 @@ public class Uc2iActions implements VPActionController {
 
 			IModelElement fromusecase = include.getFrom();
 			IModelElement tousecase = include.getTo();
+			
+			 
 
 			String list = "";
 			if (fromusecase.hasStereotype("list")) {
