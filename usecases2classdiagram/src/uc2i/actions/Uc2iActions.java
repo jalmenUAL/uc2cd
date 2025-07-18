@@ -595,7 +595,7 @@ public class Uc2iActions implements VPActionController {
 					nassociation.setTo(usecase_to);
 					IAssociationEnd associationFromEnd = (IAssociationEnd) nassociation.getFromEnd();
 					//2025associationFromEnd.setMultiplicity("1");
-					associationFromEnd.setName("_" + clean(usecase_from.getName())+"cojones"); //2025
+					associationFromEnd.setName("_" + clean(usecase_from.getName()));  
 					IAssociationEnd associationToEnd = (IAssociationEnd) nassociation.getToEnd();
 					associationToEnd.setMultiplicity("1");
 					associationToEnd.setName("_" + clean(usecase_to.getName()));
